@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Calculator</title>
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body class="container lg:w-96">
+    <div class="py-6">
+        <input type="text" id="input" readonly class="w-full h-10 px-3 text-2xl text-right border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+        <div class="grid grid-cols-4 mt-4 gap-4">
+            <button id="ac" class="bg-red-500 text-white p-4 rounded-lg hover:bg-red-600 active:bg-red-700">AC</button>
+            <button id="ce" class="bg-amber-500 text-white p-4 rounded-lg hover:bg-amber-600 active:bg-amber-700">CE</button>
+            <button id="div" class="input">/</button>
+            <button id="mul" class="input">*</button>
+        </div>
+        <div class="grid grid-cols-4 mt-4 gap-4">
+            <button id="seven" class="input">7</button>
+            <button id="eight" class="input">8</button>
+            <button id="nine" class="input">9</button>
+            <button id="sub" class="input">-</button>
+        </div>
+        <div class="grid grid-cols-4 mt-4 gap-4">
+            <button id="four" class="input">4</button>
+            <button id="five" class="input">5</button>
+            <button id="six" class="input">6</button>
+            <button id="add" class="input">+</button>
+        </div>
+        <div class="grid grid-cols-4 mt-4 gap-4">
+            <button id="one" class="input">1</button>
+            <button id="two" class="input">2</button>
+            <button id="three" class="input">3</button>
+            <button id="eq" class="input">=</button>
+        </div>
+        <div class="grid grid-cols-2 mt-4 gap-4">
+            <button id="zero" class="input">0</button>
+            <button id="point" class="input">.</button>
+        </div>
+    </div>
+
+    <script>
+        // simple calculator with javascript
+        // krisna madani
+
+        const ac = document.getElementById('ac');
+        const ce = document.getElementById('ce');
+        const div = document.getElementById('div');
+        const mul = document.getElementById('mul');
+        const sub = document.getElementById('sub');
+        const add = document.getElementById('add');
+        const eq = document.getElementById('eq');
+        const point = document.getElementById('point');
+        const zero = document.getElementById('zero');
+        const one = document.getElementById('one');
+        const two = document.getElementById('two');
+        const three = document.getElementById('three');
+        const four = document.getElementById('four');
+        const five = document.getElementById('five');
+        const six = document.getElementById('six');
+        const seven = document.getElementById('seven');
+        const eight = document.getElementById('eight');
+        const nine = document.getElementById('nine');
+
+        const input = document.querySelector('input');
+
+        ac.addEventListener('click', () => {
+            input.value = '';
+        });
+
+        ce.addEventListener('click', () => {
+            input.value = input.value.slice(0, -1);
+        });
+
+        div.addEventListener('click', () => {
+            input.value += '/';
+        });
+
+        mul.addEventListener('click', () => {
+            input.value += '*';
+        });
+
+        sub.addEventListener('click', () => {
+            input.value += '-';
+        }); 
+
+        add.addEventListener('click', () => {
+            input.value += '+';
+        });
+        
+        one.addEventListener('click', () => {
+            input.value += '1';
+        });
+
+        two.addEventListener('click', () => {
+            input.value += '2';
+        });
+
+        three.addEventListener('click', () => {
+            input.value += '3';
+        });
+
+        four.addEventListener('click', () => {
+            input.value += '4';
+        });
+
+        five.addEventListener('click', () => {
+            input.value += '5';
+        });
+
+        six.addEventListener('click', () => {
+            input.value += '6';
+        });
+
+        seven.addEventListener('click', () => {
+            input.value += '7';
+        });
+
+        eight.addEventListener('click', () => {
+            input.value += '8';
+        });
+
+        nine.addEventListener('click', () => {
+            input.value += '9';
+        });
+
+        zero.addEventListener('click', () => {
+            input.value += '0';
+        });
+
+        point.addEventListener('click', () => {
+            input.value += '.';
+        });
+
+        eq.addEventListener('click', () => {
+            input.value = eval(input.value);
+        });
+    </script>
+</body>
+</html>
